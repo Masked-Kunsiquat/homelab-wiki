@@ -2,7 +2,7 @@
 title: arr suite, misc.
 description: 
 published: 1
-date: 2024-03-20T06:53:40.059Z
+date: 2024-03-20T06:54:09.146Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T06:52:03.205Z
@@ -272,7 +272,9 @@ SONARR4K_TDARR_DB_ID=op://Secrets-Management/Sonarr/Sonarr4K/SONARR4K_TDARR_DB_I
 SONARR4K_TDARR_TRANSLATE=op://Secrets-Management/Sonarr/Sonarr4K/SONARR4K_TDARR_TRANSLATE
 ```
 
-</details>### [![wizarr.png](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/scaled-1680-/wizarr.png) ](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/wizarr.png)Wizarr
+</details>
+
+## Wizarr
 
 <details id="bkmrk-compose.yaml-----ver-2"><summary>compose.yaml</summary>
 
