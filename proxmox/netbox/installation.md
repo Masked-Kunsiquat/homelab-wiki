@@ -2,7 +2,7 @@
 title: Netbox Installation
 description: 
 published: 1
-date: 2024-03-20T17:09:55.139Z
+date: 2024-03-20T17:15:25.191Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T17:09:55.139Z
@@ -19,7 +19,9 @@ dateCreated: 2024-03-20T17:09:55.139Z
 
 <details id="bkmrk-step-1%3A-configure-fi"><summary>Step 1: Configure Firewall</summary>
 
-<p class="callout info">First, configure the firewall. Ubuntu ships with ufw (Uncomplicated Firewall) by default.</p>
+> First, configure the firewall. Ubuntu ships with ufw (Uncomplicated Firewall) by default.
+{.is-info}
+
 
 - [ ] Check if the firewall is running. 
   ```shell
@@ -39,8 +41,9 @@ dateCreated: 2024-03-20T17:09:55.139Z
     sudo ufw enable && sudo ufw status
     ```
 
-<p class="callout success">You should see an output similar to the following.  
-</p>
+> You should see an output similar to the following:  
+{.is-success}
+
 
 ```
 Status: active
@@ -61,18 +64,20 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 
 </details><details id="bkmrk-step-2%3A-install-and-"><summary>Step 2: Install and Configure PostgreSQL</summary>
 
----
-
----
 
 - [ ] Install PostgreSQL. 
   ```shell
     sudo apt-get install postgresql postgresql-contrib
     ```
-- [ ] Launch the PostgreSQL shell. After this command, you should be in the Postgres shell (`<em>postgres=#</em>`). 
+- [ ] Launch the PostgreSQL shell. 
+>After this command, you should be in the Postgres shell (`postgres=#`). 
+{.is-info}
+
+  
   ```shell
     sudo -i -u postgres psql
-    ```
+    
+  ```
 
 ---
 
@@ -97,8 +102,10 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
     GRANT CREATE ON SCHEMA public TO netbox;
     ```
 
-<p class="callout info">Use `\q` to exit the PostgreSQL shell.  
-</p>
+> Use `\q` to exit the PostgreSQL shell.  
+{.is-info}
+
+
 
 ---
 
@@ -117,9 +124,11 @@ SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, co
 netbox=> \q
 ```
 
-<p class="callout success">If successful, you will enter a netbox prompt.   
-  
-Type `\conninfo` to confirm the connection, or type `\q` to exit the shell.</p>
+> If successful, you will enter a netbox prompt.   
+>   
+> Type `\conninfo` to confirm the connection, or type `\q` to exit the shell.
+{.is-success}
+
 
 </details><details id="bkmrk-step-3%3A-install-and-"><summary>Step 3: Install and Optionally Configure Redis</summary>
 
@@ -132,18 +141,24 @@ Type `\conninfo` to confirm the connection, or type `\q` to exit the shell.</p>
     redis-server -v
     ```
 
-<p class="callout info">You may wish to modify the Redis configuration at `/etc/redis.conf `or `/etc/redis/redis.conf`, but in most cases the default should be sufficient.</p>
+> You may wish to modify the Redis configuration at `/etc/redis.conf `or `/etc/redis/redis.conf`, but in most cases the default should be sufficient.
+{.is-info}
+
 
 - [ ] Verify the service status, using the redis-cli utility. 
   ```shell
     redis-cli ping
     ```
 
-<p class="callout success">If succesful, you should receive a `PONG` response from Redis.</p>
+> If succesful, you should receive a `PONG` response from Redis.
+{.is-success}
+
 
 </details><details id="bkmrk-step-4%3A-install-netb"><summary>Step 4: Download Netbox</summary>
 
-<p class="callout info">We will be installing Netbox by `git` cloning the repository.</p>
+> We will be installing Netbox by `git` cloning the repository.
+{.is-info}
+
 
 - [ ] Install the prerequisites. 
   ```shell
@@ -166,9 +181,11 @@ Type `\conninfo` to confirm the connection, or type `\q` to exit the shell.</p>
     sudo git clone -b master --depth 1 https://github.com/netbox-community/netbox.git .
     ```
 
-<p class="callout info">The `git clone` command above utilizes a "shadow clone" to retrieve only the most recent commit. If you need to download the entire history, omit the `--depth 1` argument.  
-  
-**You should see output similar to the following:**</p>
+> The `git clone` command above utilizes a "shadow clone" to retrieve only the most recent commit. If you need to download the entire history, omit the `--depth 1` argument.  
+>   
+> **You should see output similar to the following:**
+{.is-info}
+
 
 ```
 Cloning into '.'...
