@@ -2,7 +2,7 @@
 title: New Server Setup
 description: 
 published: 1
-date: 2024-03-20T17:22:29.363Z
+date: 2024-03-20T17:36:39.424Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T16:44:28.805Z
@@ -32,7 +32,7 @@ dateCreated: 2024-03-20T16:44:28.805Z
 
 ##### Configure `sshd_config` file
 
-1. Edit the ssh config file to allow ssh  
+1. Edit the ssh config file to allow ssh connections  
     ```shell
     sudo nano /etc/ssh/sshd_config
     ```
@@ -119,22 +119,29 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
 
 ##### Linux User Modifications
 
-- Create a new user (`USERNAME`) 
+- Create a new user (`USERNAME`). 
   ```
     adduser [USERNAME]
     ```
-- Add a user to a group (`GROUP_NAME`) 
+- Add a user to a group (`GROUP_NAME`). 
   ```
     usermod -aG [GROUP_NAME] [USERNAME]
     ```
+- List all users or groups, respectively.
+  ```shell
+  cat /etc/passwd
+  ```
+  ```shell
+  cat /etc/group
+  ```
 
 ##### SSH Configurations
 
-- Forward SSH-key (`ssh-pub-file`) to remote host from orchestrator 
+- Forward SSH-key (`ssh-pub-file`) to remote host from orchestrator. 
   ```
     ssh-copy-id -i <ssh-pub-file> [USERNAME]@[REMOTE_HOST]
     ```
-- Copy an SSH public-key (`ssh-pub-key`) on the remote host to the `authorized_keys` file  
+- Copy an SSH public-key (`ssh-pub-key`) on the remote host to the `authorized_keys` file.  
     ```shell
     cd             # Navigate to the user's home directory
     cd .ssh        # Navigate to the .ssh directory
@@ -148,5 +155,40 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
     # Make sure permissions are set correctly
     chmod 600 authorized_keys
     ```
+##### File and Directory Operations
+- Create a directory.
+  ```shell
+  mkdir [DIRECTORY]
+  ```
+
+- Remove a directory.
+  ```shell
+  rm -r [DIRECTORY]
+  ```
+  
+- Copy (`cp`) OR Move (`mv`) a file, respectively.
+  ```shell
+  cp [SOURCE_FILE] [DESTINATION_FILE]
+  ```
+  ```shell
+  mv [SOURCE_FILE] [DESTINATION_FILE]
+  ```
+
+##### Process Management
+- List running processes.
+  ```shell
+  ps aux
+  ```
+  
+- Kill a process by PID (`PID`) and by name (`PROCESS_NAME`), respectively.
+  ```shell
+  kill PID
+  ```
+  ```shell
+  kill [PROCESS_NAME]
+  ```
+
+  
+
 
 </details>
