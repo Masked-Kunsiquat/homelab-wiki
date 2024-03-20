@@ -2,7 +2,7 @@
 title: New Server Setup
 description: 
 published: 1
-date: 2024-03-20T17:36:39.424Z
+date: 2024-03-20T17:38:25.249Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T16:44:28.805Z
@@ -117,6 +117,24 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
 
 </details><details id="bkmrk-generic-commands-lin"><summary>Generic Commands</summary>
 
+##### File and Directory Operations
+- Create a directory.
+  ```shell
+  mkdir [DIRECTORY]
+  ```
+
+- Remove a directory.
+  ```shell
+  rm -r [DIRECTORY]
+  ```
+  
+- Copy (`cp`) OR Move (`mv`) a file, respectively.
+  ```shell
+  cp [SOURCE_FILE] [DESTINATION_FILE]
+  ```
+  ```shell
+  mv [SOURCE_FILE] [DESTINATION_FILE]
+  ```
 ##### Linux User Modifications
 
 - Create a new user (`USERNAME`). 
@@ -134,7 +152,20 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
   ```shell
   cat /etc/group
   ```
-
+##### Process Management
+- List running processes.
+  ```shell
+  ps aux
+  ```
+  
+- Kill a process by PID (`PID`) and by name (`PROCESS_NAME`), respectively.
+  ```shell
+  kill PID
+  ```
+  ```shell
+  kill [PROCESS_NAME]
+  ```
+  
 ##### SSH Configurations
 
 - Forward SSH-key (`ssh-pub-file`) to remote host from orchestrator. 
@@ -155,40 +186,5 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
     # Make sure permissions are set correctly
     chmod 600 authorized_keys
     ```
-##### File and Directory Operations
-- Create a directory.
-  ```shell
-  mkdir [DIRECTORY]
-  ```
-
-- Remove a directory.
-  ```shell
-  rm -r [DIRECTORY]
-  ```
-  
-- Copy (`cp`) OR Move (`mv`) a file, respectively.
-  ```shell
-  cp [SOURCE_FILE] [DESTINATION_FILE]
-  ```
-  ```shell
-  mv [SOURCE_FILE] [DESTINATION_FILE]
-  ```
-
-##### Process Management
-- List running processes.
-  ```shell
-  ps aux
-  ```
-  
-- Kill a process by PID (`PID`) and by name (`PROCESS_NAME`), respectively.
-  ```shell
-  kill PID
-  ```
-  ```shell
-  kill [PROCESS_NAME]
-  ```
-
-  
-
 
 </details>
