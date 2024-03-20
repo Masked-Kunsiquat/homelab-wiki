@@ -2,7 +2,7 @@
 title: Media Management
 description: 
 published: 1
-date: 2024-03-20T06:40:18.922Z
+date: 2024-03-20T06:42:12.285Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T06:40:18.922Z
@@ -118,7 +118,8 @@ REDIS_HOSTNAME=op://Secrets-Management/Immich/IMMICH_REDIS_HOSTNAME
 ```
 
 </details>
-### Sabnzbd
+
+### SABnzbd
 
 <details id="bkmrk-compose.yaml-----ver"><summary>compose.yaml</summary>
 
