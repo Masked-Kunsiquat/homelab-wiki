@@ -2,7 +2,7 @@
 title: arr suite, misc.
 description: 
 published: 1
-date: 2024-03-20T06:52:03.205Z
+date: 2024-03-20T06:53:40.059Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T06:52:03.205Z
@@ -19,7 +19,7 @@ dateCreated: 2024-03-20T06:52:03.205Z
 {.is-info}
 
 
-### ![radarr.png](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/scaled-1680-/radarr.png) Radarr
+## Radarr
 
 <details id="bkmrk-compose.yaml-----ver"><summary>compose.yaml</summary>
 
@@ -112,7 +112,7 @@ RADARR4K_TP_ADDON=op://Secrets-Management/Radarr/Radarr4K/RADARR4K_TP_ADDON
 
 </details>
 
-### [![bazarr.png](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/scaled-1680-/bazarr.png) ](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/bazarr.png)Bazarr
+## Bazarr
 
 <details id="bkmrk-compose.yaml-----ver-1"><summary>compose.yaml</summary>
 
@@ -187,7 +187,7 @@ BAZARR4K_TP_ADDON=op://Secrets-Management/srdonfpn6izjbbfwpkc7y4o3uy/Radarr4K/BA
 
 </details>
 
-### [![sonarr.png](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/scaled-1680-/sonarr.png) ](https://bookstack.brysmarthome.page/uploads/images/gallery/2024-03/sonarr.png)Sonarr
+## Sonarr
 
 <details id="bkmrk-compose.yaml-service"><summary>compose.yaml</summary>
 
