@@ -2,7 +2,7 @@
 title: New Server Setup
 description: 
 published: 1
-date: 2024-03-20T17:38:25.249Z
+date: 2024-03-20T17:39:59.214Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T16:44:28.805Z
@@ -186,5 +186,14 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
     # Make sure permissions are set correctly
     chmod 600 authorized_keys
     ```
-
+##### System Logs
+- View system logs.
+  ```shell
+  journalctl -xe
+  ```
+- View specific log file (`LOG_FILE`).
+  ```shell
+  tail -f /var/log/[LOG_FILE]
+  ```
+  
 </details>
