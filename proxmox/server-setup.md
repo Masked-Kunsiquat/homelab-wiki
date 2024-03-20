@@ -2,7 +2,7 @@
 title: New Server Setup
 description: 
 published: 1
-date: 2024-03-20T16:53:30.446Z
+date: 2024-03-20T17:22:29.363Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T16:44:28.805Z
@@ -10,8 +10,10 @@ dateCreated: 2024-03-20T16:44:28.805Z
 
 # New Server Setup
 
-<p class="callout info">I'm going to use this page to list out the steps I typically take to set up a generic server.   
-I will eventually use this guide as an outline to build an Ansible role.</p>
+> I'm going to use this page to list out the steps I typically take to set up a generic server.   
+> I will eventually use this guide as an outline to build an Ansible role.
+{.is-info}
+
 
 <details id="bkmrk-create-the-user-crea"><summary>Create the User</summary>
 
@@ -61,25 +63,28 @@ I will eventually use this guide as an outline to build an Ansible role.</p>
     sudo nano authorized_keys
     ```
     
-    <p class="callout info">Your file will look similar to below. Each key will have its own line in the `authorized_keys` file.</p>
+>Your file will look similar to below. Each key will have its own line in the `authorized_keys` file.
+{.is-info}
     
-    ```
+    
+  ```
       GNU nano 7.2                       authorized_keys                   Modified  
     ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDV2qoTZ+9/t31andY0ZS7TNlcu1j0nJXbuUJ2jYZH>
     
     
     ^G Help      ^O Write Out ^W Where Is  ^K Cut       ^T Execute   ^C Location
-    ^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
-    ```
-5. Fix the permissions of the `authorized_keys` file.  
-    ```shell
-    sudo chmod 600 ~/.ssh/authorized_keys
-    ```
-6. Restart the `sshd` service. 
-  ```shell
-    sudo systemctl restart sshd
-    
+    ^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line    
   ```
+  
+5. Fix the permissions of the `authorized_keys` file.  
+    
+  	```shell
+    sudo chmod 600 ~/.ssh/authorized_keys  
+  	```
+6. Restart the `sshd` service. 
+  	```shell
+    sudo systemctl restart sshd   
+  	```
 
   
 ### **Orchestrator**
@@ -90,9 +95,11 @@ ssh-copy-id -i serveradmin@[REMOTE_HOST]
 
 #####  Configure the `.ssh/config` File
 
-<p class="callout info">In the example below, using the command "`ssh debian`" will now be the equivalent of   
-"`ssh serveradmin@10.0.0.10`."   
-</p>
+> In the example below, using the command "`ssh debian`" will now be the equivalent of   
+> "`ssh serveradmin@10.0.0.10`."   
+{.is-info}
+
+
 
 ```
 # ~/.ssh/config
