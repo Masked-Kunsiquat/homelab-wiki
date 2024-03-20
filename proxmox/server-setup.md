@@ -2,7 +2,7 @@
 title: New Server Setup
 description: 
 published: 1
-date: 2024-03-20T16:44:28.805Z
+date: 2024-03-20T16:53:30.446Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T16:44:28.805Z
@@ -15,10 +15,12 @@ I will eventually use this guide as an outline to build an Ansible role.</p>
 
 <details id="bkmrk-create-the-user-crea"><summary>Create the User</summary>
 
-- Create a new user ("severadmin"). ```shell
+- Create a new user ("severadmin"). 
+  ```shell
     adduser serveradmin
     ```
-- Add the new user to the sudo group ```
+- Add the new user to the sudo group 
+    ```
     usermod -aG sudo serveradmin
     ```
 
@@ -73,11 +75,14 @@ I will eventually use this guide as an outline to build an Ansible role.</p>
     ```shell
     sudo chmod 600 ~/.ssh/authorized_keys
     ```
-6. Restart the `sshd` service. ```shell
+6. Restart the `sshd` service. 
+  ```shell
     sudo systemctl restart sshd
-    ```
+    
+  ```
 
-### **Orchestrator:**
+  
+### **Orchestrator**
 
 ```shell
 ssh-copy-id -i serveradmin@[REMOTE_HOST]
@@ -107,16 +112,19 @@ IdentityFile ~/.ssh/keys/id_rsa_debian
 
 ##### Linux User Modifications
 
-- Create a new user (`USERNAME`) ```
+- Create a new user (`USERNAME`) 
+  ```
     adduser [USERNAME]
     ```
-- Add a user to a group (`GROUP_NAME`) ```
+- Add a user to a group (`GROUP_NAME`) 
+  ```
     usermod -aG [GROUP_NAME] [USERNAME]
     ```
 
 ##### SSH Configurations
 
-- Forward SSH-key (`ssh-pub-file`) to remote host from orchestrator ```
+- Forward SSH-key (`ssh-pub-file`) to remote host from orchestrator 
+  ```
     ssh-copy-id -i <ssh-pub-file> [USERNAME]@[REMOTE_HOST]
     ```
 - Copy an SSH public-key (`ssh-pub-key`) on the remote host to the `authorized_keys` file  
