@@ -2,7 +2,7 @@
 title: Media Management
 description: 
 published: 1
-date: 2024-03-20T06:45:36.942Z
+date: 2024-03-20T06:47:16.131Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-20T06:40:18.922Z
@@ -10,10 +10,12 @@ dateCreated: 2024-03-20T06:40:18.922Z
 
 # Media Management
 
-		[Immich](https://github.com/immich-app/immich?tab=readme-ov-file): High-performance self-hosted photo and video backup solution. 
-    [SABnzbd](https://github.com/sabnzbd/sabnzbd): SABnzbd is an open-source Usenet client facilitating file downloads from Usenet newsgroups, streamlining access to and retrieval of content from the Usenet network.  
-      
-    Each component includes `compose.yaml` and `.env` files configuration.
+> - [Immich](https://github.com/immich-app/immich?tab=readme-ov-file): High-performance self-hosted photo and video backup solution. 
+> - [SABnzbd](https://github.com/sabnzbd/sabnzbd): SABnzbd is an open-source Usenet client facilitating file downloads from Usenet newsgroups, streamlining access to and retrieval of content from the Usenet network.  
+> 
+> Each component includes `compose.yaml` and `.env` files configuration.
+{.is-info}
+
 
 ### Immich
 
