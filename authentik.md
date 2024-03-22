@@ -2,7 +2,7 @@
 title: Authentic (SSO)
 description: 
 published: 1
-date: 2024-03-22T21:13:19.521Z
+date: 2024-03-22T21:25:16.437Z
 tags: 
 editor: markdown
 dateCreated: 2024-03-22T20:52:04.413Z
@@ -47,7 +47,7 @@ Edit/Create your `config.yml` file for Vikunja. Local authentication can be safe
 
 Incorporate the following example Auth block into your `config.yml`:
 
-```
+```yaml
 auth:
   # Local authentication will let users log in and register (if enabled) through the db.
   # This is the default auth mechanism and does not require any additional configuration.
